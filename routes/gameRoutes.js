@@ -1,8 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const videoGames = require('../models/games')
-// const uuid = require('uuidv4');
-//above line is causing an error
+const uuid = require('uuidv4');
 
 //getAllGames
 router.get('/',(req, res)=>{
@@ -38,10 +37,8 @@ const game = videoGames.filter((game)=>
   }
   else {
 
-
-
- let newGame = {};
-  //  newGame.id = uuid()
+let newGame = {};
+   newGame.id = uuid()
    newGame.name = req.body.name
    newGame.description = req.body.description
    newGame.yearReleased = req.body.yearReleased
