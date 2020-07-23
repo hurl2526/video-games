@@ -41,8 +41,8 @@ let newGame = {};
    newGame.id = uuid()
    newGame.name = req.body.name
    newGame.description = req.body.description
-   newGame.yearReleased = req.body.yearReleased
-   newGame.playTime = req.body.playTime 
+  //  newGame.yearReleased = req.body.yearReleased
+  //  newGame.playTime = req.body.playTime 
    videoGames.push(newGame)
 
    return res.status(201).json({message: 'Game Created', videoGames})
